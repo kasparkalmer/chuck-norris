@@ -1,6 +1,11 @@
-import Aurelia from 'aurelia';
-import { MyApp } from './my-app';
+import Aurelia, { RouterConfiguration } from 'aurelia';
+import { ChuckNorrisApp } from './chuck-norris-app';
+
+import '../static/site.css';
 
 Aurelia
-  .app(MyApp)
+  .register(
+    RouterConfiguration.customize({ sameUrlStrategy: 'reload' })
+  )
+  .app(ChuckNorrisApp)
   .start();

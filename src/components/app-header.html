@@ -1,0 +1,13 @@
+<nav>
+  <a load="home">
+    Chuck Norris
+  </a>
+
+  <br>
+  
+  <span repeat.for="item of appState.categories" class="nav-item">
+      <a load="/category(${item})">
+        ${item}
+      </a>
+  </span>
+</nav>

@@ -1,0 +1,8 @@
+<import from="../components/loading"/>
+
+<div id='category'></div>
+<div id='content'>
+    <h1>${category}</h1>
+    <loading if.bind="loading"></loading>
+    <p repeat.for="joke of jokes">${joke['value']}</p>
+</div>

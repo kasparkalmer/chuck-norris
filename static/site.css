@@ -1,0 +1,139 @@
+body {
+  margin: 0 auto;
+  font-family: "Calibri", sans-serif;
+}
+
+nav, #content, footer {
+  position: relative;
+  z-index: 1;
+}
+
+nav, footer {
+  background-color: #181818;
+  text-align: center;
+  padding: 4px;
+}
+
+nav a {
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+nav a:link, nav a:visited {
+  color: #CCC;
+}
+
+nav a:hover {
+  color: #888;
+}
+
+#category {
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/default.jpg');
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+}
+
+#content {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  margin: 20px auto 50px;
+  padding: 10px;
+  width: min(90%, 960px);
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+loading p {
+  text-align: center;
+}
+
+p {
+  margin: 16px auto 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  color: #888;
+  width: 100%;
+}
+
+.animal {
+  background-image: url('./img/animal.jpg') !important;
+}
+
+.career {
+  background-image: url('./img/career.jpg') !important;
+}
+
+.celebrity {
+  background-image: url('./img/celebrity.jpg') !important;
+}
+
+.dev {
+  background-image: url('./img/dev.jpg') !important;
+}
+
+.explicit {
+  background-image: url('./img/explicit.jpg') !important;
+}
+
+.fashion {
+  background-image: url('./img/fashion.jpg') !important;
+}
+
+.food {
+  background-image: url('./img/food.jpg') !important;
+}
+
+.history {
+  background-image: url('./img/history.jpg') !important;
+}
+
+.money {
+  background-image: url('./img/money.jpg') !important;
+}
+
+.movie {
+  background-image: url('./img/movie.jpg') !important;
+}
+
+.music {
+  background-image: url('./img/music.jpg') !important;
+}
+
+.political {
+  background-image: url('./img/political.jpg') !important;
+}
+
+.religion {
+  background-image: url('./img/religion.jpg') !important;
+}
+
+.science {
+  background-image: url('./img/science.jpg') !important;
+}
+
+.sport {
+  background-image: url('./img/sport.jpg') !important;
+}
+
+.travel {
+  background-image: url('./img/travel.jpg') !important;
+}
