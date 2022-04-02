@@ -11,12 +11,12 @@ export class Loading {
       });
   }
 
-  attached() {
+  public attached(): void {
     this.loading = true;
     this.animate();
   }
 
-  private animate() {
+  private animate(): void {
     setTimeout(() => {
       if (!this.loading) { return; }
 
