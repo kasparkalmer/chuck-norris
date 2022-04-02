@@ -1,10 +1,12 @@
-import { HttpClient, inject } from "aurelia";
+import { HttpClient, singleton } from "aurelia";
+import { IJoke } from "../domain/i-joke";
 
-inject()
+@singleton
 export class JokesService {
-  private httpClient: HttpClient = new HttpClient();
+
+  constructor(private httpClient: HttpClient) { }
   
-  public getRandomJokeFromCategory(category: string) {
+  public async getRandomJokeFromCategory(category: string): Promise<IJoke> {
     return this.httpClient
       .get('https://api.chucknorris.io/jokes/random?category=' + category, { cache: 'no-store' })
       .then(response => response.json());

@@ -1,4 +1,4 @@
-export interface Joke {
+export interface IJoke {
   id: string,
   categories: string[],
   createdAt: Date,

@@ -1,15 +1,16 @@
 import { EventAggregator, IRouteViewModel, Params } from "aurelia";
-import { Joke } from "../domain/joke";
+import { IJoke } from "../domain/i-joke";
 import { AppState } from "../state/app-state";
 
 export class Category implements IRouteViewModel {
   private category = '';
-  private jokes: Joke[] = [];
+  private jokes: IJoke[] = [];
   private loading = false;
 
   constructor(private eventAggregator: EventAggregator, private appState: AppState) { }
 
-  load(parameters: Params) {
+  public load(parameters: Params): void {
+    console.log(parameters);
     if (parameters[0]) {
       this.category = parameters[0];
       this.loading = true;
@@ -19,14 +20,14 @@ export class Category implements IRouteViewModel {
     }
   }
 
-  private async addJokes(count: number) {
+  private async addJokes(count: number): Promise<void> {
     await this.appState.addJokes(this.category, count);
     this.loading = false;
     this.eventAggregator.publish('loaded');
     this.jokes = this.appState.jokes.filter(joke => joke.categories.includes(this.category));
   }
 
-  private changeViewClass() {
+  private changeViewClass(): void {
       setTimeout(() => {
           const backgroundDiv = document.getElementById('category');
           if (backgroundDiv) {
